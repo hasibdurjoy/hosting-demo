@@ -21,8 +21,7 @@ interface our_faq_content_type {
 
 const our_faq_content = {
   title: "FAQ",
-  sm_des:
-    "Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  sm_des: "",
   cate_title: "All Categories",
   categories: [
     { title: "Design", items: "12" },
