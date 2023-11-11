@@ -39,49 +39,63 @@ const price_data: price_data_type[] = [
 
 const PricingHomeOne = () => {
     return (
-        <>
-           <section className="pricing-area gray-bg pt-115 pb-120">
-                <div className="container">
-                    <div className="row ">
-                        <div className="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
-                            <div className="section-title text-center mb-70">
-                                <h2>Price & Plans</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row">
-                        {price_data.map((item, i)  =>
-                            <div key={i} className="col-xl-4 col-lg-4 col-md-6">
-                                <div className="pricing-wrapper white-bg text-center mb-30 wow fadeInUp animated" data-wow-delay="0.3s">
-                                    <div className="price-icon mb-15">
-                                        <Image src={item.icon} alt="theme-pure" />
-                                    </div>
-                                    <div className="pricin-title mb-20">
-                                        <h3>{item.title}</h3>
-                                    </div>
-                                    <div className="price-body">
-                                        <h2><span>$</span> {item.price} <span className="month">/mo</span></h2>
-                                        <p>{item.sm_des}</p>
-                                    </div>
-                                    <div className="price-link">
-                                        <Link href="#" className="btn btn-soft-border">Purchase Now</Link>
-                                    </div>
-                                </div>
-                            </div>                        
-                        )} 
-                    </div>
-                    <div className="row">
-                        <div className="col-12">
-                            <div className="pricing-more-link text-center mt-50">
-                                 <p><Link href="#">See plan details</Link> and pricing for more information</p>
-                            </div>
-                        </div>
-                    </div>
+      <>
+        <section className="pricing-area gray-bg pt-115 pb-120">
+          <div className="container">
+            <div className="row ">
+              <div className="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
+                <div className="section-title text-center mb-70">
+                  <h2>Price & Plans</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </p>
                 </div>
-            </section> 
-        </>
+              </div>
+            </div>
+            <div className="row">
+              {price_data.map((item, i) => (
+                <div key={i} className="col-xl-4 col-lg-4 col-md-6">
+                  <div
+                    className="pricing-wrapper white-bg text-center mb-30 wow fadeInUp animated"
+                    data-wow-delay="0.3s"
+                  >
+                    <div className="price-icon mb-15">
+                      <Image src={item.icon} alt="theme-pure" />
+                    </div>
+                    <div className="pricin-title mb-20">
+                      <h3>{item.title}</h3>
+                    </div>
+                    <div className="price-body">
+                      <h2>
+                        <span>$</span> {item.price}{" "}
+                        <span className="month">/mo</span>
+                      </h2>
+                      <p>{item.sm_des}</p>
+                    </div>
+                    <div className="price-link">
+                      <Link href="/products/1" className="btn btn-soft-border">
+                        Purchase Now
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="row">
+              <div className="col-12">
+                <div className="pricing-more-link text-center mt-50">
+                  <p>
+                    <Link href="#">See plan details</Link> and pricing for more
+                    information
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </>
     );
 };
 
