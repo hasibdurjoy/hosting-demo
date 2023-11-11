@@ -73,25 +73,37 @@ const TestimonailHomeOne = ({style} : any) => {
       }
     };
     return (
-        <> 
-            <section className={`testimonail-area ${style ? "testimonail-area-server server-bg" : "grad-bg" } pt-115 pb-120`} >
-                <div className="container">
-                    <div className="row">
-                        <div className="col-xl-6 col-lg-8">
-                            <div className="section-title section-title-white mb-70">
-                                <h2>{title}</h2>
-                                <p>{sm_des}</p>
-                            </div>
-                        </div>
-                    </div>
-                       <div className="row activ-testimonai wow fadeInUp  slick-initialized slick-slider animated">
-                            <button onClick={handlePrevClick} type="button" className="slick-prev slick-arrow">
-                                <i className="fas fa-arrow-left"></i>
-                            </button>
-                            <button onClick={handleNextClick} type="button" className="slick-next slick-arrow">
-                                <i className="fas fa-arrow-right"></i>
-                            </button> 
-                            <Slider {...setting} ref={sliderRef} data-wow-delay="0.3s">
+      <>
+        <section
+          className={`testimonail-area ${
+            style ? "testimonail-area-server server-bg" : "grad-bg"
+          } pt-115 pb-120`}
+        >
+          <div className="container">
+            <div className="row">
+              <div className="col-xl-6 col-lg-8">
+                <div className="section-title section-title-white mb-70">
+                  <h2>{title}</h2>
+                  <p>{sm_des}</p>
+                </div>
+              </div>
+            </div>
+            <div className="row activ-testimonai wow fadeInUp  slick-initialized slick-slider animated">
+              <button
+                onClick={handlePrevClick}
+                type="button"
+                className="slick-prev slick-arrow"
+              >
+                <i className="fas fa-arrow-left"></i>
+              </button>
+              <button
+                onClick={handleNextClick}
+                type="button"
+                className="slick-next slick-arrow"
+              >
+                <i className="fas fa-arrow-right"></i>
+              </button>
+              {/*  <Slider {...setting} ref={sliderRef} data-wow-delay="0.3s">
                                 {testimonial_data.map((item, i)   => 
                                     <div key={i} className="col-xl-12">
                                         <div className={`${style &&  "wraper_style" } testimonail-wraper mb-30`}>
@@ -116,13 +128,11 @@ const TestimonailHomeOne = ({style} : any) => {
                                         </div>
                                     </div>                        
                                 )}                     
-                            </Slider> 
-                       </div>
-
-
-                </div>
-            </section>
-        </>
+                            </Slider>  */}
+            </div>
+          </div>
+        </section>
+      </>
     );
 };
 
