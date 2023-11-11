@@ -17,7 +17,7 @@ const accordion_data = [
     id: 1,
     question: "How do I give my computer a static local IP address?",
     answer:
-      "But we dolor eiusmod tempor incididunt ut labore et dolore magna aliqua. sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "To assign a static local IP address, access your router settings, locate the DHCP reservation or static IP configuration section, and assign an IP address to your computer's MAC address. Ensure the chosen IP is within your network range and not already in use. Save changes and restart your computer if necessary.",
     accordion_id: "One",
     collapsed: "",
     aria_expanded: true,
@@ -27,7 +27,7 @@ const accordion_data = [
     id: 2,
     question: "Why can't people connect to the web server?",
     answer:
-      "But we dolor eiusmod tempor incididunt ut labore et dolore magna aliqua. sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "BPossible reasons for inability to connect to a web server include firewall issues, incorrect server configuration, network problems, or server downtime. Check firewall settings, server configuration files, network connectivity, and ensure the server is running. Verify domain/DNS settings and consult server logs for troubleshooting.",
     accordion_id: "Two",
     collapsed: "collapsed",
     aria_expanded: false,
@@ -37,7 +37,7 @@ const accordion_data = [
     id: 3,
     question: "What domain name should I choose for my site?",
     answer:
-      "But we dolor eiusmod tempor incididunt ut labore et dolore magna aliqua. sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Select a domain name that reflects your site's purpose, is easy to remember, and aligns with your brand. Keep it short, avoid hyphens, and choose a relevant extension (.com, .net, etc.). Ensure it's unique and not trademarked. Consider your target audience and aim for a memorable, brand-friendly name.",
     accordion_id: "Three",
     collapsed: "collapsed",
     aria_expanded: false,
@@ -47,7 +47,7 @@ const accordion_data = [
     id: 4,
     question: "How to choose the perfect domain name for my site?",
     answer:
-      "But we dolor eiusmod tempor incididunt ut labore et dolore magna aliqua. sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Choose a domain name that is concise, easy to spell, and memorable. Prioritize a .com extension for credibility. Reflect your brand or site's purpose, avoiding complex or trendy terms. Ensure it's unique and not trademarked. Consider future growth and global appeal for a versatile and lasting choice.",
     accordion_id: "Four",
     collapsed: "collapsed",
     aria_expanded: false,
