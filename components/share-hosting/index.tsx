@@ -15,7 +15,7 @@ const ShareHosting = () => {
         <ChoseAreaHomeOne />
         <PriceArea />
         <CoreFeatures />
-        <TestimonailHomeOne style={true} />
+        {/* <TestimonailHomeOne style={true} /> */}
       </main>
       <FooterOne />
     </>

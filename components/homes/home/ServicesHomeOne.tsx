@@ -62,41 +62,52 @@ import service_img_6 from "../../../public/assets/img/icon/s06.png";
  
 const ServicesHomeOne = () => { 
     return (
-        <>
-            <section className="services-area pt-115 pb-95">
-                <div className="container">
-                    <div className="row align-items-center mb-40">
-                        <div className="col-xl-6 col-lg-8">
-                            <div className="section-title mb-30">
-                                <h2>{title}</h2>
-                                <p>{sub_title}</p>
-                            </div>
-                        </div>
-                        <div className="col-xl-6 col-lg-4">
-                            <div className="section-link text-left text-lg-right mb-30">
-                                <a href="#" className="btn btn-soft-border">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row">
-                        {services_data.map((item, i) => 
-                            <div key={i} className="col-xl-4 col-lg-4 col-md-6">
-                                <div className="services-box text-center mb-30 wow fadeInUp animated" data-wow-delay="0.3s">
-                                    <div className="services-icon mb-35">
-                                        <Image src={item.img} alt="theme-pure" />
-                                    </div>
-                                    <div className="services-content">
-                                        <h3><Link href="/service-details">{item.title}</Link></h3>
-                                        <p>{item.sm_des}</p>
-                                        <a className="services-link" href="#"><i className="far fa-chevron-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>                        
-                        )} 
-                    </div>
+      <>
+        <section className="services-area pt-115 pb-95">
+          <div className="container">
+            <div className="row align-items-center mb-40">
+              <div className="col-xl-6 col-lg-8">
+                <div className="section-title mb-30">
+                  <h2>{title}</h2>
+                  <p>{sub_title}</p>
                 </div>
-            </section>
-        </>
+              </div>
+              <div className="col-xl-6 col-lg-4">
+                <div className="section-link text-left text-lg-right mb-30">
+                  <a href="#" className="btn btn-soft-border">
+                    Learn More
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="row">
+              {services_data.map((item, i) => (
+                <div key={i} className="col-xl-4 col-lg-4 col-md-6">
+                  <div
+                    className="services-box text-center mb-30 wow fadeInUp animated"
+                    data-wow-delay="0.3s"
+                  >
+                    <div className="services-icon mb-35">
+                      <Image src={item.img} alt="theme-pure" />
+                    </div>
+                    <div className="services-content">
+                      <h3>
+                        <Link href="/service-details">{item.title}</Link>
+                      </h3>
+                      <p>{item.sm_des}</p>
+                      <Link href="/share-hosting" className="services-link">
+                        {/* <a className="services-link"> */}
+                        <i className="far fa-chevron-right"></i>
+                        {/* </a> */}
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </>
     );
 };
 
