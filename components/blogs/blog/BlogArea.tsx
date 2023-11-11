@@ -138,140 +138,208 @@ const BlogArea = () => {
       }
     };
     return (
-        <>
-            <section className="blog-area gray-bg pt-120 pb-80">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-8"> 
-                            {blog_content.map((item, i)  => 
-                                <article key={i} className="postbox post format-image mb-40">
-                                    {item.just_thumb && 
-                                        <div className="postbox__thumb">
-                                            <a href="#">
-                                                <Image src={blog_img_1} alt="blog image" />
-                                            </a>
-                                        </div> 
-                                    }
-                                    {item.video &&
-                                        <div className="postbox__video">
-                                            <Image src={item.img_thumb}  alt="theme-pure" />
-                                            <button className="popup-video video-btn" 
-                                                onClick={() => setIsVideoOpen(true)}
-                                                style={{ cursor: "pointer" }}>
-                                                <i className="fas fa-play"></i>
-                                            </button> 
-                                        </div>                                  
-                                    }
-                                    {item?.slider && 
-                                        <div className="postbox__gallery mb-30 slick-slider"> 
-                                            <button type="button" className="slick-prev slick-arrow" 
-                                            onClick={handlePrev}>
-                                                    <i className="fas fa-arrow-left"></i>
-                                                </button>
-                                                <button type="button" className="slick-next slick-arrow" 
-                                                onClick={handleNext}>
-                                                    <i className="fas fa-arrow-right"></i>
-                                                </button>
-                                            <Slider {...setting} ref={sliderRef}>
+      <>
+        <section className="blog-area gray-bg pt-120 pb-80">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-8">
+                {blog_content.map((item, i) => (
+                  <article key={i} className="postbox post format-image mb-40">
+                    {item.just_thumb && (
+                      <div className="postbox__thumb">
+                        <a href="#">
+                          <Image src={blog_img_1} alt="blog image" />
+                        </a>
+                      </div>
+                    )}
+                    {item.video && (
+                      <div className="postbox__video">
+                        <Image src={item.img_thumb} alt="theme-pure" />
+                        <button
+                          className="popup-video video-btn"
+                          onClick={() => setIsVideoOpen(true)}
+                          style={{ cursor: "pointer" }}
+                        >
+                          <i className="fas fa-play"></i>
+                        </button>
+                      </div>
+                    )}
+                    {item?.slider && (
+                      <div className="postbox__gallery mb-30 slick-slider">
+                        <button
+                          type="button"
+                          className="slick-prev slick-arrow"
+                          onClick={handlePrev}
+                        >
+                          <i className="fas fa-arrow-left"></i>
+                        </button>
+                        <button
+                          type="button"
+                          className="slick-next slick-arrow"
+                          onClick={handleNext}
+                        >
+                          <i className="fas fa-arrow-right"></i>
+                        </button>
+                        {/* <Slider {...setting} ref={sliderRef}>
                                                 {item.slider_img.map((sl_img, index) =>
                                                     <Image key={index} src={sl_img}  alt="theme-pure" /> 
                                                 )}
-                                            </Slider> 
-                                        </div>
-                                    }
-                                    {item?.audio && 
-                                        <div className="postbox__audio embed-responsive embed-responsive-16by9 mb-30">
-                                            <iframe src={item.audioID}></iframe>
-                                        </div>
-                                    }
-                                    <div className="postbox__text p-50">
-                                        <div className="post-meta mb-15">
-                                            <span><i className="far fa-calendar-check"></i> {item.date}</span>
-                                            <span><a href="#"><i className="far fa-user"></i>{item.post_by}</a></span>
-                                            <span><a href="#"><i className="far fa-comments"></i> {item.comments} Comments</a></span>
-                                        </div>
-                                        <h3 className="blog-title">
-                                            <a href="#">{item.title}</a>
-                                        </h3>
-                                        <div className="post-text mb-20">
-                                            <p>{item.sm_des}</p>
-                                        </div>
-                                        <div className="read-more mt-30">
-                                            <a href="#" className="btn btn-2">read more</a>
-                                        </div>
-                                    </div>
-                               </article>  
-                            )} 
-
-                            <article className="postbox post format-quote mb-40">
-                                <div className="post-text">
-                                <blockquote>
-                                    <p>This health blog from NPR takes a fairly broad look at the medical world,.</p>
-                                    <footer>- Rosalina Pong</footer>
-                                </blockquote>
-                                </div>
-                            </article>
-
-
-                            <div className="basic-pagination basic-pagination-2 mb-40">
-                                <ul>
-                                <li><Link href="#"><i className="fas fa-angle-double-left"></i></Link></li>
-                                <li><Link href="#">01</Link></li>
-                                <li className="active"><Link href="#">02</Link></li>
-                                <li><Link href="#">03</Link></li>
-                                <li><Link href="#"><i className="fas fa-ellipsis-h"></i></Link></li>
-                                <li><Link href="#"><i className="fas fa-angle-double-right"></i></Link></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-4">
-                            <SearchBox /> 
-                            <AboutMe  /> 
-                            <PopularNewsFeeds /> 
-                            <CategoriesArea /> 
-                            <div className="widget mb-40">
-                                <div className="widget-title-box mb-30">
-                                <span className="animate-border"></span>
-                                <h3 className="widget-title">Social Profile</h3>
-                                </div>
-                                <div className="social-profile">
-                                    <SocialLinks /> 
-                                </div>
-                            </div>
-                            <div className="widget mb-40">
-                                <div className="widget-title-box mb-30">
-                                <span className="animate-border"></span>
-                                <h3 className="widget-title">Instagram Feeds</h3>
-                                </div>
-                                <ul id="Instafeed">
-                                <li><Link href="#"><Image src={instafed_img_1} alt="theme-pure" /></Link></li>
-                                <li><Link href="#"><Image src={instafed_img_2} alt="theme-pure" /></Link></li>
-                                <li><Link href="#"><Image src={instafed_img_3} alt="theme-pure" /></Link></li>
-                                <li><Link href="#"><Image src={instafed_img_4} alt="theme-pure" /></Link></li>
-                                <li><Link href="#"><Image src={instafed_img_5} alt="theme-pure" /></Link></li>
-                                <li><Link href="#"><Image src={instafed_img_6} alt="theme-pure" /></Link></li>
-                                </ul>
-                            </div>
-                            <Tags /> 
-                            <div className="widget mb-40 p-0 b-0">
-                                <div className="banner-widget">
-                                <Link href="#"><Image src={banner} alt="theme-pure" /></Link>
-                                </div>
-                            </div>
-                        </div>
-                        
+                                            </Slider>  */}
+                      </div>
+                    )}
+                    {item?.audio && (
+                      <div className="postbox__audio embed-responsive embed-responsive-16by9 mb-30">
+                        <iframe src={item.audioID}></iframe>
+                      </div>
+                    )}
+                    <div className="postbox__text p-50">
+                      <div className="post-meta mb-15">
+                        <span>
+                          <i className="far fa-calendar-check"></i> {item.date}
+                        </span>
+                        <span>
+                          <a href="#">
+                            <i className="far fa-user"></i>
+                            {item.post_by}
+                          </a>
+                        </span>
+                        <span>
+                          <a href="#">
+                            <i className="far fa-comments"></i> {item.comments}{" "}
+                            Comments
+                          </a>
+                        </span>
+                      </div>
+                      <h3 className="blog-title">
+                        <a href="#">{item.title}</a>
+                      </h3>
+                      <div className="post-text mb-20">
+                        <p>{item.sm_des}</p>
+                      </div>
+                      <div className="read-more mt-30">
+                        <a href="#" className="btn btn-2">
+                          read more
+                        </a>
+                      </div>
                     </div>
-                </div>
-            </section>
+                  </article>
+                ))}
 
-             {/* video modal start */}
-             <VideoPopup
-                isVideoOpen={isVideoOpen}
-                setIsVideoOpen={setIsVideoOpen}
-                videoId={"g1u2_-Xz8qw"} />
-            {/* video modal end */}
-        </>
+                <article className="postbox post format-quote mb-40">
+                  <div className="post-text">
+                    <blockquote>
+                      <p>
+                        This health blog from NPR takes a fairly broad look at
+                        the medical world,.
+                      </p>
+                      <footer>- Rosalina Pong</footer>
+                    </blockquote>
+                  </div>
+                </article>
+
+                <div className="basic-pagination basic-pagination-2 mb-40">
+                  <ul>
+                    <li>
+                      <Link href="#">
+                        <i className="fas fa-angle-double-left"></i>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="#">01</Link>
+                    </li>
+                    <li className="active">
+                      <Link href="#">02</Link>
+                    </li>
+                    <li>
+                      <Link href="#">03</Link>
+                    </li>
+                    <li>
+                      <Link href="#">
+                        <i className="fas fa-ellipsis-h"></i>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="#">
+                        <i className="fas fa-angle-double-right"></i>
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="col-lg-4">
+                <SearchBox />
+                <AboutMe />
+                <PopularNewsFeeds />
+                <CategoriesArea />
+                <div className="widget mb-40">
+                  <div className="widget-title-box mb-30">
+                    <span className="animate-border"></span>
+                    <h3 className="widget-title">Social Profile</h3>
+                  </div>
+                  <div className="social-profile">
+                    <SocialLinks />
+                  </div>
+                </div>
+                <div className="widget mb-40">
+                  <div className="widget-title-box mb-30">
+                    <span className="animate-border"></span>
+                    <h3 className="widget-title">Instagram Feeds</h3>
+                  </div>
+                  <ul id="Instafeed">
+                    <li>
+                      <Link href="#">
+                        <Image src={instafed_img_1} alt="theme-pure" />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="#">
+                        <Image src={instafed_img_2} alt="theme-pure" />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="#">
+                        <Image src={instafed_img_3} alt="theme-pure" />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="#">
+                        <Image src={instafed_img_4} alt="theme-pure" />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="#">
+                        <Image src={instafed_img_5} alt="theme-pure" />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="#">
+                        <Image src={instafed_img_6} alt="theme-pure" />
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+                <Tags />
+                <div className="widget mb-40 p-0 b-0">
+                  <div className="banner-widget">
+                    <Link href="#">
+                      <Image src={banner} alt="theme-pure" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* video modal start */}
+        <VideoPopup
+          isVideoOpen={isVideoOpen}
+          setIsVideoOpen={setIsVideoOpen}
+          videoId={"g1u2_-Xz8qw"}
+        />
+        {/* video modal end */}
+      </>
     );
 };
 
