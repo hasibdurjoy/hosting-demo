@@ -58,7 +58,7 @@ const footer_content: footer_content_type = {
     "Unearth the Power of Hosting Excellence with HostMiner: Your Gateway to Seamless and Reliable Web Solutions",
   address: "45 Constance Street, London, England, E16 2DQ",
   mail: "info@hostiminer.com",
-  phone: "+8987 5675 754 6",
+  phone: "+447308597871",
   website: "www.hostiminer.com",
   footer_info:
     "The promotional price is for the first term only and renews.30-Day Money-Back Guarantee does not extend to domain names.",

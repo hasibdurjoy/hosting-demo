@@ -34,7 +34,7 @@ const our_faq_content = {
     { title: "Accessories", items: "23" },
   ],
   call_title: "Make a Call",
-  phone: "+874(784) 65 57",
+  phone: "+447308597871",
   faq_data: [
     {
       id: 1,
