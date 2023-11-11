@@ -3,6 +3,7 @@ import Link from "next/link";
 import HeaderTwo from "../../components/layout/headers/header-2";
 import FooterOne from "../../components/layout/footers/FooterOne";
 import Breadcrumb from "../../components/common/breadcrumbs/breadcrumb";
+import HeaderOne from "../../components/layout/headers/header";
 
 const Error = () => {
   return (
