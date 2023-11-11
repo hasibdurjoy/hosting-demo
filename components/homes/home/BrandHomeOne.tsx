@@ -66,21 +66,21 @@ const setting = {
 const BrandHomeOne = ({style} : any) => {
     const sliderRef = useRef(null);
     return (
-        <> 
-            <section className={`brand-area ${style && "pt-120"} pb-120`}>
-                <div className="container">
-                    <Slider {...setting} ref={sliderRef} className="row brand-active">
-                        {brand_images.map((item, i) => 
+      <>
+        <section className={`brand-area ${style && "pt-120"} pb-120`}>
+          <div className="container">
+            <Slider {...setting} ref={sliderRef} className="row brand-active">
+              {/*  {brand_images?.map((item, i) => 
                             <div key={i} className="col-12">
                                 <div className="single-brand">
                                     <Image src={item.img} alt="theme-pure" />
                                 </div>
                             </div>                        
-                        )} 
-                    </Slider>
-                </div>
-            </section>
-        </>
+                        )}  */}
+            </Slider>
+          </div>
+        </section>
+      </>
     );
 };
 
