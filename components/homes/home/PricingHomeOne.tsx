@@ -40,17 +40,13 @@ const price_data: price_data_type[] = [
 const PricingHomeOne = () => {
     return (
       <>
-        <section className="pricing-area gray-bg pt-115 pb-120">
+        <section className="pricing-area gray-bg pt-20 pb-20">
           <div className="container">
             <div className="row ">
               <div className="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
                 <div className="section-title text-center mb-70">
                   <h2>Price & Plans</h2>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
+                  <p>See Our prices at a glance and purchase your desire one</p>
                 </div>
               </div>
             </div>
@@ -82,16 +78,6 @@ const PricingHomeOne = () => {
                   </div>
                 </div>
               ))}
-            </div>
-            <div className="row">
-              <div className="col-12">
-                <div className="pricing-more-link text-center mt-50">
-                  <p>
-                    <Link href="#">See plan details</Link> and pricing for more
-                    information
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </section>
