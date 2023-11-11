@@ -6,15 +6,22 @@ interface about_content_type {
 }
 
 const about_content: about_content_type = {
-    sub_title: "About Us",
-    title: "Meet With Our Alive Cool Services.",
-    title_2: "Meet With Our Alive Cool Services.",
-    sm_des: <>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</>
-}
+  sub_title: "About Us",
+  title: "Meet With Our Alive Cool Services.",
+  title_2: "Meet With Our Alive Cool Services.",
+  sm_des: (
+    <>
+      At Hosti Miner, we are dedicated to powering your online presence through
+      cutting-edge hosting solutions. With a commitment to excellence and a
+      passion for innovation, we strive to be your trusted partner in the
+      digital landscape.Hosti Miner was founded with a clear mission — to
+      provide reliable, scalable, and secure hosting services that empower
+      businesses and individuals to thrive online. We believe in harnessing the
+      latest technology to offer hosting solutions that meet the evolving needs
+      of our diverse clientele.
+    </>
+  ),
+};
 const {sub_title, title, title_2, sm_des} = about_content
 const AboutUsArea = () => {
     return (

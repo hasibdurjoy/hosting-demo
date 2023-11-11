@@ -88,10 +88,11 @@ interface core_features_content_type {
     sm_des: string;
 }
 const core_features_content: core_features_content_type = {
-    title: "Why Choose Us",
-    title_2: "Core Features",
-    sm_des: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-}
+  title: "Why Choose Us",
+  title_2: "Core Features",
+  sm_des:
+    "At Hosti Miner, we prioritize your online success with a commitment to unparalleled performance, ensuring lightning-fast load times and continuous website availability for your visitors. Security is at the forefront of our mission, implementing robust measures to safeguard your data against potential threats, providing you with peace of mind. Whether you're a startup or an enterprise, our hosting solutions are designed for scalability, allowing you to upgrade seamlessly as your website grows. Our dedicated 24/7 support team is always ready to assist, handling technical queries and providing general assistance to ensure your hosting experience is smooth and trouble-free. Embracing innovation, we stay ahead of the curve by continuously exploring new technologies, ensuring we offer the best possible hosting solutions to meet your evolving needs. Hosti Miner is not just a hosting provider; we are your trusted partner in achieving online excellence.",
+};
 const {title, title_2, sm_des} = core_features_content
 
 const CoreFeaturesHomeThree = ({style} : any) => {

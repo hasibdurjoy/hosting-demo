@@ -12,49 +12,54 @@ interface accordion_data_type {
     show: string;
 }
 // accordion data
- const accordion_data: accordion_data_type[] = [
-        {
-            id: 1,
-            question: "How do I give my computer a static local IP address?",
-            answer: <>But we dolor eiusmod tempor incididunt ut labore et dolore magna aliqua. sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  </>,    
-            accordion_id: "One",
-            collapsed: "", 
-            aria_expanded: true, 
-            show: "show"
-        },
-        {
-            id: 2,
-            question: "Why can't people connect to the web server?",
-            answer: <>But we dolor eiusmod tempor incididunt ut labore et dolore magna aliqua. sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </>,    
-            accordion_id: "Two",
-            collapsed: "collapsed", 
-            aria_expanded: false, 
-            show: ""
-        },
-        {
-            id: 3,
-            question: "What domain name should I choose site?",
-            answer: <>But we dolor eiusmod tempor incididunt ut labore et dolore magna aliqua. sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</>,    
-            accordion_id: "Three",
-            collapsed: "collapsed", 
-            aria_expanded: false, 
-            show: ""
-        },
-        {
-            id: 4,
-            question: "What domain name should I choose site?",
-            answer: <>But we dolor eiusmod tempor incididunt ut labore et dolore magna aliqua. sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</>,    
-            accordion_id: "Foure",
-            collapsed: "collapsed", 
-            aria_expanded: false, 
-            show: ""
-        },  
- ]
+const accordion_data = [
+  {
+    id: 1,
+    question: "How do I give my computer a static local IP address?",
+    answer:
+      "But we dolor eiusmod tempor incididunt ut labore et dolore magna aliqua. sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    accordion_id: "One",
+    collapsed: "",
+    aria_expanded: true,
+    show: "show",
+  },
+  {
+    id: 2,
+    question: "Why can't people connect to the web server?",
+    answer:
+      "But we dolor eiusmod tempor incididunt ut labore et dolore magna aliqua. sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    accordion_id: "Two",
+    collapsed: "collapsed",
+    aria_expanded: false,
+    show: "",
+  },
+  {
+    id: 3,
+    question: "What domain name should I choose for my site?",
+    answer:
+      "But we dolor eiusmod tempor incididunt ut labore et dolore magna aliqua. sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    accordion_id: "Three",
+    collapsed: "collapsed",
+    aria_expanded: false,
+    show: "",
+  },
+  {
+    id: 4,
+    question: "How to choose the perfect domain name for my site?",
+    answer:
+      "But we dolor eiusmod tempor incididunt ut labore et dolore magna aliqua. sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    accordion_id: "Four",
+    collapsed: "collapsed",
+    aria_expanded: false,
+    show: "",
+  },
+];
 
 const faq_content = {
-    title: "FAQ Here",
-    sm_info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-}
+  title: "FAQ Here",
+  sm_info:
+    "Domain hosting is a service that stores your website's files and data, associating them with a unique domain name. It enables users to access your site on the internet.",
+};
 const {title, sm_info}  = faq_content
 
 const FAQArea = ({style}: any) => {

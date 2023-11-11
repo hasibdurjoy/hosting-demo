@@ -48,35 +48,60 @@ const ChoseAreaHomeOne = () => {
     };
 
     return (
-        <>
-            <section className="chose-area pt-115 pb-90">
-                <div className="container">
-                    <div className="row ">
-                        <div className="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
-                            <div className="section-title text-center mb-70">
-                                <h2>Why Choose Us?</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row chose-row wow fadeInUp animated" data-wow-delay="0.3s">
-                        {chose_data.map((item, i) => 
-                            <div key={i} className="col-xl-4 col-lg-4">
-                                <div className={`chose-box text-center ${activeIndex === i ? 'active' : ''} mb-30`} onMouseEnter={() => handleMouseEnter(i)}>
-                                    <Image src={item.icon} alt="theme-pure" />
-                                    <div className="chose-content">
-                                        <span>{item.sirial_no}</span>
-                                        <h3>{item.title}</h3>
-                                        <p>{item.info}</p>
-                                    </div>
-                                </div>
-                            </div>                        
-                        )} 
-                    </div>
+      <>
+        <section className="chose-area pt-115 pb-90">
+          <div className="container">
+            <div className="row ">
+              <div className="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
+                <div className="section-title text-center mb-70">
+                  <h2>Why Choose Us?</h2>
+                  <p>
+                    At Hosti Miner, we prioritize your online success with a
+                    commitment to unparalleled performance, ensuring
+                    lightning-fast load times and continuous website
+                    availability for your visitors. Security is at the forefront
+                    of our mission, implementing robust measures to safeguard
+                    your data against potential threats, providing you with
+                    peace of mind. Whether you're a startup or an enterprise,
+                    our hosting solutions are designed for scalability, allowing
+                    you to upgrade seamlessly as your website grows. Our
+                    dedicated 24/7 support team is always ready to assist,
+                    handling technical queries and providing general assistance
+                    to ensure your hosting experience is smooth and
+                    trouble-free. Embracing innovation, we stay ahead of the
+                    curve by continuously exploring new technologies, ensuring
+                    we offer the best possible hosting solutions to meet your
+                    evolving needs. Hosti Miner is not just a hosting provider;
+                    we are your trusted partner in achieving online excellence.
+                  </p>
                 </div>
-            </section>
-        </>
+              </div>
+            </div>
+            <div
+              className="row chose-row wow fadeInUp animated"
+              data-wow-delay="0.3s"
+            >
+              {chose_data.map((item, i) => (
+                <div key={i} className="col-xl-4 col-lg-4">
+                  <div
+                    className={`chose-box text-center ${
+                      activeIndex === i ? "active" : ""
+                    } mb-30`}
+                    onMouseEnter={() => handleMouseEnter(i)}
+                  >
+                    <Image src={item.icon} alt="theme-pure" />
+                    <div className="chose-content">
+                      <span>{item.sirial_no}</span>
+                      <h3>{item.title}</h3>
+                      <p>{item.info}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </>
     );
 };
 
