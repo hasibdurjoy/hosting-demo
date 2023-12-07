@@ -14,12 +14,26 @@ const HeaderOne = () => {
     username: "",
     email: "",
     password: "",
+    isLoggedIn: false,
   });
 
   const handleSignOut = () => {
     if (typeof window !== "undefined") {
-      localStorage?.clear();
-      setUserDetails({ username: "", email: "", password: "" });
+      const localData = localStorage?.getItem("userDetails");
+      const userData = localData && JSON.parse(localData);
+      const data = {
+        username: userData.username,
+        email: userData.email,
+        password: userData.password,
+        isLoggedIn: false,
+      };
+      localStorage.setItem("userDetails", JSON.stringify(data));
+      setUserDetails({
+        username: "",
+        email: "",
+        password: "",
+        isLoggedIn: false,
+      });
       window.location.reload();
     }
   };
@@ -109,7 +123,7 @@ const HeaderOne = () => {
                     <i className="far fa-key"></i> WHMCS
                   </a>
                 </div> */}
-                {userDetails?.username ? (
+                {userDetails?.username && userDetails.isLoggedIn ? (
                   <div className="d-flex gap-2">
                     <h4 className="text-white btn">
                       {userDetails?.username?.split(" ")[0][0]}

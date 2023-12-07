@@ -17,6 +17,7 @@ const RegisterForm = () => {
         username,
         email,
         password,
+        isLoggedIn: true,
       };
       localStorage?.setItem("userDetails", JSON.stringify(data));
       router.push("/login");
