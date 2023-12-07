@@ -14,10 +14,17 @@ const LoginForm = () => {
       if (username.length && password.length) {
         const localData = localStorage?.getItem("userDetails");
         const userData = localData && JSON.parse(localData);
+        const data = {
+          username: userData.username,
+          email: userData.email,
+          password: userData.password,
+          isLoggedIn: true,
+        };
         if (
           (userData.username === username || userData.email === username) &&
           userData.password === password
         ) {
+          localStorage.setItem("userDetails", JSON.stringify(data));
           router.push("/");
         } else {
           alert("Incorrect username or password");
