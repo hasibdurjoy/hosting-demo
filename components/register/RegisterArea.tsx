@@ -9,7 +9,7 @@ const RegisterArea = () => {
     if (typeof window !== "undefined") {
       const localData = localStorage?.getItem("userDetails");
       const userData = localData && JSON.parse(localData);
-      if (userData.isLoggedIn) {
+      if (userData?.isLoggedIn) {
         router.push("/");
       }
     }
