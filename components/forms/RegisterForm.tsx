@@ -15,9 +15,9 @@ const RegisterForm = () => {
     if (username?.length && email.length && password.length) {
       const localData = localStorage?.getItem("userDetails");
       const userData = localData && JSON.parse(localData);
-      if (userData.username === username) {
+      if (userData?.username === username) {
         alert("Username already exist");
-      } else if (userData.email === email) {
+      } else if (userData?.email === email) {
         alert("email already exist");
       } else {
         const data = {
@@ -30,7 +30,15 @@ const RegisterForm = () => {
         router.push("/login");
       }
     } else {
-      alert("Missing Any option");
+      if(username.length===0){
+        alert("Enter Username");
+      }
+      else if(email.length===0){
+        alert("Enter email");
+      }
+      else if(password.length===0){
+        alert("Enter password");
+      }
     }
   };
   return (
