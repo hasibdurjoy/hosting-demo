@@ -10,20 +10,21 @@ const LoginForm = () => {
   const [password, setPassword] = useState("");
 
   const handleLogin = () => {
-    if (username.length && password.length) {
-      const localData = localStorage?.getItem("userDetails");
-      const userData = localData && JSON.parse(localData);
-      console.log(userData);
-      if (
-        (userData.username === username || userData.email === username) &&
-        userData.password === password
-      ) {
-        router.push("/");
+    if (typeof window !== "undefined") {
+      if (username.length && password.length) {
+        const localData = localStorage?.getItem("userDetails");
+        const userData = localData && JSON.parse(localData);
+        if (
+          (userData.username === username || userData.email === username) &&
+          userData.password === password
+        ) {
+          router.push("/");
+        } else {
+          alert("Incorrect username or password");
+        }
       } else {
-        alert("Incorrect username or password");
+        alert("Fill up all");
       }
-    } else {
-      alert("Fill up all");
     }
   };
   return (

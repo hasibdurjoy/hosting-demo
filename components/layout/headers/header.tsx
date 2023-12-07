@@ -17,16 +17,20 @@ const HeaderOne = () => {
   });
 
   const handleSignOut = () => {
-    localStorage?.clear();
-    setUserDetails({ username: "", email: "", password: "" });
-    window.location.reload();
+    if (typeof window !== "undefined") {
+      localStorage?.clear();
+      setUserDetails({ username: "", email: "", password: "" });
+      window.location.reload();
+    }
   };
 
   useEffect(() => {
-    const localData = localStorage?.getItem("userDetails");
-    const userData = localData && JSON.parse(localData);
-    setUserDetails(userData);
-  }, [localStorage?.getItem("userDetails")]);
+    if (typeof window !== "undefined") {
+      const localData = localStorage?.getItem("userDetails");
+      const userData = localData && JSON.parse(localData);
+      setUserDetails(userData);
+    }
+  }, []);
 
   return (
     <>
