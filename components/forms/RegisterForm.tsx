@@ -18,7 +18,7 @@ const RegisterForm = () => {
         email,
         password,
       };
-      localStorage.setItem("userDetails", JSON.stringify(data));
+      localStorage?.setItem("userDetails", JSON.stringify(data));
       router.push("/login");
     } else {
       alert("Missing Any option");

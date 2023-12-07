@@ -11,7 +11,7 @@ const LoginForm = () => {
 
   const handleLogin = () => {
     if (username.length && password.length) {
-      const localData = localStorage.getItem("userDetails");
+      const localData = localStorage?.getItem("userDetails");
       const userData = localData && JSON.parse(localData);
       console.log(userData);
       if (

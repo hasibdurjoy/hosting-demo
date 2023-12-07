@@ -6,12 +6,12 @@ import { useRouter } from "next/navigation";
 const RegisterArea = () => {
   const router = useRouter();
   useEffect(() => {
-    const localData = localStorage.getItem("userDetails");
+    const localData = localStorage?.getItem("userDetails");
     const userData = localData && JSON.parse(localData);
     if (userData) {
       router.push("/");
     }
-  }, [localStorage.getItem("userDetails")]);
+  }, [localStorage?.getItem("userDetails")]);
 
   return (
     <>

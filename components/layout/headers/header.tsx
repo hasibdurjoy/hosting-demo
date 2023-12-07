@@ -17,16 +17,16 @@ const HeaderOne = () => {
   });
 
   const handleSignOut = () => {
-    localStorage.clear();
+    localStorage?.clear();
     setUserDetails({ username: "", email: "", password: "" });
     window.location.reload();
   };
 
   useEffect(() => {
-    const localData = localStorage.getItem("userDetails");
+    const localData = localStorage?.getItem("userDetails");
     const userData = localData && JSON.parse(localData);
     setUserDetails(userData);
-  }, [localStorage.getItem("userDetails")]);
+  }, [localStorage?.getItem("userDetails")]);
 
   return (
     <>
