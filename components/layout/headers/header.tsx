@@ -111,7 +111,12 @@ const HeaderOne = () => {
                 </div> */}
                 {userDetails?.username ? (
                   <div className="d-flex gap-2">
-                    <h4 className="text-white btn">{userDetails.username}</h4>
+                    <h4 className="text-white btn">
+                      {userDetails?.username?.split(" ")[0][0]}
+                      {userDetails?.username?.split(" ")[1]
+                        ? userDetails?.username?.split(" ")[1][0]
+                        : userDetails?.username?.split(" ")[0][1]}
+                    </h4>
                     <button className="btn" onClick={() => handleSignOut()}>
                       Sign Out
                     </button>
