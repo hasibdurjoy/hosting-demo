@@ -3,17 +3,17 @@ import Link from "next/link";
 
 const social_links = [
   {
-    link: "https://www.facebook.com/themepure.net",
+    link: "https://www.facebook.com/profile.php?id=61551814770789",
     target: "_blank",
     icon: "fab fa-facebook-f",
   },
   {
-    link: "https://twitter.com/themepure_net",
+    link: "https://x.com/HostMiner30924?t=hrZ6ceBJjHcIKaa-Rlh58Q&s=09",
     target: "_blank",
     icon: "fab fa-twitter",
   },
 
-  {
+  /* {
     link: "https://www.linkedin.com/in/theme-pure-2a276518b/?originalSubdomain=bd",
     target: "_blank",
     icon: "fab fa-linkedin-in",
@@ -22,7 +22,7 @@ const social_links = [
     link: "https://www.youtube.com/@themepure",
     target: "_blank",
     icon: "fab fa-youtube",
-  },
+  }, */
 ];
 
 const SocialLinks = () => {

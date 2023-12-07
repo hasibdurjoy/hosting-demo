@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import NavMenu from "./nav-menu";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SlideBar from "./slide-bar";
 import MobileMenus from "./mobile-menus";
 import Logo from "../../../public/assets/img/logo/logo.png";
@@ -10,6 +10,24 @@ import Image from "next/image";
 const HeaderOne = () => {
   const [sidebarOppen, setSidebarOppen] = useState(false);
   const [searchOppen, setSearchOppen] = useState(false);
+  const [userDetails, setUserDetails] = useState({
+    username: "",
+    email: "",
+    password: "",
+  });
+
+  const handleSignOut = () => {
+    localStorage.clear();
+    setUserDetails({ username: "", email: "", password: "" });
+    window.location.reload();
+  };
+
+  useEffect(() => {
+    const localData = localStorage.getItem("userDetails");
+    const userData = localData && JSON.parse(localData);
+    setUserDetails(userData);
+  }, [localStorage.getItem("userDetails")]);
+
   return (
     <>
       <header>
@@ -87,11 +105,20 @@ const HeaderOne = () => {
                     <i className="far fa-key"></i> WHMCS
                   </a>
                 </div> */}
-                <Link href={"/register"}>
-                  <button className="btn">
-                    <i className="far fa-user"></i> Sign In
-                  </button>
-                </Link>
+                {userDetails?.username ? (
+                  <div className="d-flex gap-2">
+                    <h4 className="text-white btn">{userDetails.username}</h4>
+                    <button className="btn" onClick={() => handleSignOut()}>
+                      Sign Out
+                    </button>
+                  </div>
+                ) : (
+                  <Link href={"/register"}>
+                    <button className="btn">
+                      <i className="far fa-user"></i> Sign In
+                    </button>
+                  </Link>
+                )}
               </div>
               <div className="col-12">
                 <div className="mobile-menu mean-container d-lg-none">
