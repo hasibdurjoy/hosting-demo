@@ -13,14 +13,22 @@ const RegisterForm = () => {
 
   const handleRegister = () => {
     if (username?.length && email.length && password.length) {
-      const data = {
-        username,
-        email,
-        password,
-        isLoggedIn: true,
-      };
-      localStorage?.setItem("userDetails", JSON.stringify(data));
-      router.push("/login");
+      const localData = localStorage?.getItem("userDetails");
+      const userData = localData && JSON.parse(localData);
+      if (userData.username === username) {
+        alert("Username already exist");
+      } else if (userData.email === email) {
+        alert("email already exist");
+      } else {
+        const data = {
+          username,
+          email,
+          password,
+          isLoggedIn: true,
+        };
+        localStorage?.setItem("userDetails", JSON.stringify(data));
+        router.push("/login");
+      }
     } else {
       alert("Missing Any option");
     }
